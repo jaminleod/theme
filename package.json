@@ -1,0 +1,27 @@
+{
+	"name": "@jaminleod/theme",
+	"version": "1.0.0",
+	"description": "Base theme for jaminleod projects",
+	"main": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --config vite.config.ts playground",
+		"build": "vite build"
+	},
+	"keywords": [],
+	"author": "Benjamin MacLeod",
+	"license": "MIT",
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^6.0.1",
+		"typescript": "^5.9.3",
+		"vite": "^7.1.12",
+		"vue": "^3.5.22"
+	},
+	"peerDependencies": {
+		"vue": "^3.4.0"
+	},
+	"exports": {
+		".": "./src/index.ts",
+		"./styles": "./src/styles/base.css"
+	}
+}
