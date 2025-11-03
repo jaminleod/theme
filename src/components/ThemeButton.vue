@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import {ref, computed} from 'vue'
+	import {ref, computed, onMounted} from 'vue'
 
 	const themes = ref(['light', 'dark'])
 	const currentIndex = ref(0)
@@ -21,6 +21,14 @@
 			themes.value.push(themeName)
 		}
 	}
+
+	onMounted(() => {
+		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+
+		if (prefersDark.matches) {
+			toggle()
+		}
+	})
 
 	defineExpose({addTheme})
 </script>
