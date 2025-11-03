@@ -1,6 +1,6 @@
 {
 	"name": "@jaminleod/theme",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Base theme for jaminleod projects",
 	"main": "src/index.ts",
 	"type": "module",
