@@ -76,6 +76,7 @@ h6 {
 a, button {
 	font-family: var(--jml-font-base);
 	font-weight: var(--jml-font-base-weight);
+	outline: none;
 	background: none;
 	border: none;
 	padding: 0;
@@ -90,8 +91,9 @@ button {
 	user-select: none;
 }
 
-a:hover, button:hover {
-	text-decoration-style: wavy;
+a:focus-visible, button:focus-visible {
+	color: var(--jml-color-bg);
+	background-color: var(--jml-color-fg);
 }
 
 input {
@@ -108,6 +110,11 @@ input:focus {
 	outline: none;
 	background: var(--jml-color-fg);
 	color: var(--jml-color-bg);
+}
+
+a, button, input, textarea {
+	-webkit-tap-highlight-color: transparent;
+	touch-action: manipulation;
 }
 
 code {
@@ -132,4 +139,10 @@ pre {
 pre code {
 	background: none;
 	padding: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	a:hover, button:hover {
+		text-decoration-style: wavy;
+	}
 }
