@@ -108,8 +108,6 @@ input {
 
 input:focus {
 	outline: none;
-	background: var(--jml-color-fg);
-	color: var(--jml-color-bg);
 }
 
 a, button, input, textarea {
